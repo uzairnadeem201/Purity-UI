@@ -1,13 +1,22 @@
 import "./App.css";
-
-import { Button, HStack } from "@chakra-ui/react";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
+const router = createBrowserRouter([
+    {
+    path: "/",
+    element: <Signup />,
+  },
+  {
+    path: "login",
+    element: <Login />,
+  }
+]);
 
 function App() {
   return (
-    <HStack>
-      <Button>Click me</Button>
-      <Button>Click me</Button>
-    </HStack>
+    <RouterProvider router={router} />
   );
 }
 
