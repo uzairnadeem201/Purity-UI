@@ -8,9 +8,11 @@ import {
   Container,
   Button,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
 import loginBanner from "../../assets/loginBanner.svg";
 import Footer from "@/components/Footer";
 const Login = () => {
+  const navigate = useNavigate();
   const fields = [
     { text: "Email", type: "email" },
     { text: "Password", type: "password" },
@@ -41,7 +43,14 @@ const Login = () => {
               Enter your email and password to sign in
             </Text>
           </Flex>
-          <Flex direction="column" gap="4" marginTop="8" justifyContent={"center"} alignItems={"center"} width="full">
+          <Flex
+            direction="column"
+            gap="4"
+            marginTop="8"
+            justifyContent={"center"}
+            alignItems={"center"}
+            width="full"
+          >
             <Flex direction="column" fontWeight="normal" width="full" gap="5">
               {fields.map((field) => {
                 return (
@@ -75,16 +84,27 @@ const Login = () => {
               size="lg"
               width="full"
               _hover={{ bg: "teal.600" }}
+              onClick={()=>{navigate("/dashboard")}}
             >
               SIGN IN
             </Button>
             <Text color="gray.500" fontSize={"sm"}>
               Don't have an account?{" "}
-              <span className="text-teal-500">Sign up</span>
+              <span
+                className="text-teal-500 cursor-pointer"
+                onClick={() => navigate("/")}
+              >
+                Sign up
+              </span>
             </Text>
           </Flex>
         </Flex>
-        <Flex width={"40%"} height={"full"} borderBottomLeftRadius={"lg"} overflow={"hidden"}>
+        <Flex
+          width={"40%"}
+          height={"full"}
+          borderBottomLeftRadius={"lg"}
+          overflow={"hidden"}
+        >
           <Image width="full" src={loginBanner} alt="Login Banner" />
         </Flex>
       </Flex>

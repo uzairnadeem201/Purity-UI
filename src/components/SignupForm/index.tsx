@@ -1,8 +1,12 @@
 import { IconButton , Switch, Button, Container,Flex,Text,Input} from "@chakra-ui/react";
+import type { FC } from "react";
 import apple from "../../assets/socialicons/apple.svg";
 import google from "../../assets/socialicons/google.png";
 import facebook from "../../assets/socialicons/facebook.svg";
-const SignupForm = () => {
+interface SignupFormProps {
+  onSignupSuccess?: () => void;
+}
+const SignupForm:FC<SignupFormProps> = ({onSignupSuccess}) => {
   const buttons = [
     { icon: apple, alt: "Apple" },
     { icon: google, alt: "Google" },
@@ -53,11 +57,11 @@ const SignupForm = () => {
           </Switch.Root>
           <Text color={"gray.500"} fontWeight={"normal"}>Remember me</Text>
         </Flex>
-          <Button  bg="teal.500"  rounded="full"  color="white" size="lg" width="full" _hover={{ bg: "teal.600" }}>
+          <Button  bg="teal.500"  rounded="full"  color="white" size="lg" width="full" _hover={{ bg: "teal.600" }} onClick={onSignupSuccess}>
             SIGN UP
           </Button>
           <Text color="gray.500" fontSize={"sm"}>
-            Already have an account? <span className="text-teal-500">Sign In</span>
+            Already have an account? <span className="text-teal-500 cursor-pointer" onClick={onSignupSuccess}>Sign In</span>
           </Text>
         
       </Flex>

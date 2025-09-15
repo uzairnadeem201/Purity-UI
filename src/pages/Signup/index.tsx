@@ -3,7 +3,12 @@ import Header from "@/components/Header";
 import SignupImage from "../../assets/signupimg.svg";
 import SignupForm from "@/components/SignupForm";
 import Footer from "@/components/Footer";
+import { useNavigate } from "react-router";
 const Signup = () => {
+  const navigate = useNavigate();
+  function handleSignup() {
+    navigate("/signin");
+  }
   return (
     <Flex
       direction="column"
@@ -37,7 +42,7 @@ const Signup = () => {
         </Box>
           
       </Flex>
-      <SignupForm />
+      <SignupForm onSignupSuccess={handleSignup} />
       <Footer />
     </Flex>
   );
