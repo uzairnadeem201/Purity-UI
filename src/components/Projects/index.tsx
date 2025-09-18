@@ -1,4 +1,6 @@
 import { Flex, Text, Table, Image, Progress } from "@chakra-ui/react";
+import { EllipsisVertical } from "lucide-react";
+import type { FC } from "react";
 import Avatar1 from "../../assets/avatars/Avatar1.svg";
 import Avatar2 from "../../assets/avatars/Avatar2.svg";
 import Avatar3 from "../../assets/avatars/Avatar3.svg";
@@ -10,6 +12,10 @@ import ALT from "../../assets/companies/alt.svg";
 import IN from "../../assets/companies/in.svg";
 import Slack from "../../assets/companies/slack.svg";
 import XD from "../../assets/companies/xd.svg";
+
+type projectProps = {
+  isTablePage?: Boolean;
+};
 
 type Company = {
   name: string;
@@ -70,7 +76,7 @@ const Projects: Project[] = [
   },
 ];
 
-const ProjectsTable = () => {
+const ProjectsTable: FC<projectProps> = ({ isTablePage }) => {
   return (
     <Flex
       width={"100%"}
@@ -95,26 +101,52 @@ const ProjectsTable = () => {
       <Table.Root size={"sm"}>
         <Table.Header>
           <Table.Row bgColor="transparent">
-            <Table.ColumnHeader borderBottomWidth="1px" borderColor="gray.200" fontWeight="bold" color="gray">
+            <Table.ColumnHeader
+              borderBottomWidth="1px"
+              borderColor="gray.200"
+              fontWeight="bold"
+              color="gray"
+            >
               Companies
             </Table.ColumnHeader>
-            <Table.ColumnHeader borderBottomWidth="1px" borderColor="gray.200" fontWeight="bold" color="gray">
+            <Table.ColumnHeader
+              borderBottomWidth="1px"
+              borderColor="gray.200"
+              fontWeight="bold"
+              color="gray"
+            >
               Member
             </Table.ColumnHeader>
-            <Table.ColumnHeader borderBottomWidth="1px" borderColor="gray.200" fontWeight="bold" color="gray">
+            <Table.ColumnHeader
+              borderBottomWidth="1px"
+              borderColor="gray.200"
+              fontWeight="bold"
+              color="gray"
+            >
               Budget
             </Table.ColumnHeader>
-            <Table.ColumnHeader borderBottomWidth="1px" borderColor="gray.200" fontWeight="bold" color="gray">
+            <Table.ColumnHeader
+              borderBottomWidth="1px"
+              borderColor="gray.200"
+              fontWeight="bold"
+              color="gray"
+            >
               Completion
             </Table.ColumnHeader>
+            {isTablePage && (
+              <Table.ColumnHeader
+                borderBottomWidth="1px"
+                borderColor="gray.200"
+                fontWeight="bold"
+                color="gray"
+              ></Table.ColumnHeader>
+            )}
           </Table.Row>
         </Table.Header>
         <Table.Body>
           {Projects.map((project) => (
-            <Table.Row
-              bgColor="transparent"
-            >
-              <Table.Cell borderBottomWidth="1px" borderColor="gray.200" >
+            <Table.Row bgColor="transparent">
+              <Table.Cell borderBottomWidth="1px" borderColor="gray.200">
                 <Flex gap=".5rem">
                   <Image src={project.company.icon}></Image>{" "}
                   <Text fontWeight={"bold"} color={"black"}>
@@ -133,8 +165,13 @@ const ProjectsTable = () => {
                     />
                   ))}
                 </Flex>
-              </Table.Cell >
-              <Table.Cell borderBottomWidth="1px" borderColor="gray.200" fontWeight={"bold"} color={"black"}>
+              </Table.Cell>
+              <Table.Cell
+                borderBottomWidth="1px"
+                borderColor="gray.200"
+                fontWeight={"bold"}
+                color={"black"}
+              >
                 {project.budget}
               </Table.Cell>
               <Table.Cell borderBottomWidth="1px" borderColor="gray.200">
@@ -153,6 +190,11 @@ const ProjectsTable = () => {
                   </Progress.Root>
                 </Flex>
               </Table.Cell>
+              {isTablePage && (
+                <Table.Cell borderBottomWidth="1px" borderColor="gray.200">
+                  <EllipsisVertical color={"lightgray"}></EllipsisVertical>
+                </Table.Cell>
+              )}
             </Table.Row>
           ))}
         </Table.Body>

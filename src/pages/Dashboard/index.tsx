@@ -32,7 +32,7 @@ const Dashboard = () => {
       </Flex>
       <Flex width={"100%"} height={"fit-content"} gap="1rem">
         <Box width="65%">
-          <Projects/>
+          <Projects isTablePage={false}/>
         </Box>
         <Flex
           width={"35%"}
