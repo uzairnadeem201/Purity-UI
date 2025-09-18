@@ -1,8 +1,8 @@
-import React from 'react'
+import UserChart from "@/components/UserChart"
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <UserChart/>
   )
 }
 

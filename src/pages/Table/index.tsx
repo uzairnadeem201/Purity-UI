@@ -1,8 +1,8 @@
-import React from 'react'
+import Order from "../../components/OrderOverview"
 
 const Table = () => {
   return (
-    <div>Table</div>
+   <Order/>
   )
 }
 

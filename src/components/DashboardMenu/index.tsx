@@ -1,6 +1,6 @@
-import { Flex, Image, Box, Text, IconButton, Button } from "@chakra-ui/react";
+import { Flex, Image, Box, Text,Button } from "@chakra-ui/react";
 import logo from "../../assets/dashboard.svg";
-import { useState, useMemo, type FC } from "react";
+import { useState, type FC } from "react";
 import cardImg from "../../assets/dashboardicons/cardImg.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import dashImageUrl from "../../assets/dashboardicons/Background.svg?url";
@@ -43,7 +43,7 @@ const DashboardMenu = () => {
   return (
     <Flex direction="column" width="full" height="100%" gap="1rem">
       <Image src={logo} alt="Logo" width="full" mb={4} />
-      <Flex direction="column" width="full" height="100%" py={4} gap={4}>
+      <Flex direction="column" width="full" height="100%" gap={4}>
         {menuList.map((item, index) => {
           const IconComp = item.icon;
           return (
