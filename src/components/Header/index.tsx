@@ -3,11 +3,16 @@ import loginLogo from "../../assets/login.svg";
 import { Flex, Button, Container } from "@chakra-ui/react";
 import type {FC} from "react"
 import { Box, KeyRound, User, CircleUser } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 interface HeaderProps {
   loginPage?: boolean;
 }
 
 const Header:FC<HeaderProps> = ({loginPage}) => {
+  function onClickHandle(page:string){
+    navigate(page)
+  }
+  const navigate = useNavigate();
   return (
     <Container
       position="absolute"
@@ -31,16 +36,16 @@ const Header:FC<HeaderProps> = ({loginPage}) => {
         }
 
         <Flex gap="2">
-          <Button color={loginPage ? "black" : "white"} variant="plain">
+          <Button color={loginPage ? "black" : "white"} variant="plain" onClick={()=>{onClickHandle("/dashboard")}}>
             <Box /> DASHBOARD
           </Button>
-          <Button color={loginPage ? "black" : "white"} variant="plain">
+          <Button color={loginPage ? "black" : "white"} variant="plain" onClick={()=>{onClickHandle("/profile")}}>
             <User /> PROFILE
           </Button>
-            <Button color={loginPage ? "black" : "white"} variant="plain">
+            <Button color={loginPage ? "black" : "white"} variant="plain" onClick={()=>{onClickHandle("/")}}>
             <CircleUser /> SIGN UP
           </Button>
-          <Button color={loginPage ? "black" : "white"} variant="plain">
+          <Button color={loginPage ? "black" : "white"} variant="plain" onClick={()=>{onClickHandle("/signin")}}>
             <KeyRound /> SIGN IN
           </Button>
         </Flex>

@@ -1,80 +1,11 @@
 import { Flex, Text, Table, Image, Progress } from "@chakra-ui/react";
 import { EllipsisVertical } from "lucide-react";
 import type { FC } from "react";
-import Avatar1 from "../../assets/avatars/Avatar1.svg";
-import Avatar2 from "../../assets/avatars/Avatar2.svg";
-import Avatar3 from "../../assets/avatars/Avatar3.svg";
-import Avatar4 from "../../assets/avatars/Avatar4.svg";
-import Avatar5 from "../../assets/avatars/Avatar5.svg";
-import Spotify from "../../assets/companies/spotify.svg";
-import Stremio from "../../assets/companies/stremio.svg";
-import ALT from "../../assets/companies/alt.svg";
-import IN from "../../assets/companies/in.svg";
-import Slack from "../../assets/companies/slack.svg";
-import XD from "../../assets/companies/xd.svg";
+import { Projects } from "@/data/table";
 
 type projectProps = {
   isTablePage?: Boolean;
 };
-
-type Company = {
-  name: string;
-  icon: string;
-};
-
-interface Project {
-  company: Company;
-  members: string[];
-  budget: string;
-  completion: number;
-}
-const Projects: Project[] = [
-  {
-    company: {
-      name: "Spotify",
-      icon: Spotify,
-    },
-    members: [Avatar1, Avatar4, Avatar5],
-    budget: "$24,000",
-    completion: 75,
-  },
-  {
-    company: {
-      name: "Stremio",
-      icon: Stremio,
-    },
-    members: [Avatar2],
-    budget: "$18,500",
-    completion: 60,
-  },
-  {
-    company: {
-      name: "ALT",
-      icon: ALT,
-    },
-    members: [Avatar5, Avatar2, Avatar4],
-    budget: "$32,750",
-    completion: 85,
-  },
-  {
-    company: {
-      name: "IN",
-      icon: IN,
-    },
-    members: [Avatar4, Avatar1, Avatar5],
-    budget: "$15,200",
-    completion: 40,
-  },
-  {
-    company: {
-      name: "Slack",
-      icon: Slack,
-    },
-    members: [Avatar4, Avatar2, Avatar3],
-    budget: "$42,900",
-    completion: 95,
-  },
-];
 
 const ProjectsTable: FC<projectProps> = ({ isTablePage }) => {
   return (

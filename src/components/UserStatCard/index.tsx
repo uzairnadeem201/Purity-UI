@@ -1,32 +1,8 @@
-import { Box, Flex, Text, Image, Button, Progress } from "@chakra-ui/react";
-import rocket from "../../assets/userChart/rocket.svg";
-import wrench from "../../assets/userChart/wrench.svg";
-import userWallet from "../../assets/userChart/wallet.svg";
-import userCart from "../../assets/userChart/cart.svg";
+import { Box, Flex, Text, Image, Progress } from "@chakra-ui/react";
+import { userChartData } from "@/data/dashboard";
 import UserChart from "@/components/UserChart";
 const UserStatCard = () => {
-  const userChartData = [
-    {
-      title: "User",
-      img: userWallet,
-      value: "32,294",
-    },
-    {
-      title: "Sales",
-      img: rocket,
-      value: "32,294$",
-    },
-    {
-      title: "Clicks",
-      img: userCart,
-      value: "32m",
-    },
-    {
-      title: "Items",
-      img: wrench,
-      value: "320",
-    },
-  ];
+  
   return (
     <Flex
       width="39%"

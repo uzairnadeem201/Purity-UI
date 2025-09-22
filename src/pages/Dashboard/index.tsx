@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import DashboardStats from "@/components/DashboardStats";
 import ChakraCard from "@/components/ChakraCard";
 import UserStatCard from "@/components/UserStatCard";
@@ -17,7 +17,7 @@ const Dashboard = () => {
       overflowY={"auto"}
     >
       <DashboardStats />
-      <Flex width={"100%"}  justifyContent={"space-between"}>
+      <Flex width={"100%"} justifyContent={"space-between"}>
         <ChakraCard />
         <WorkWithRocket />
       </Flex>
@@ -32,7 +32,7 @@ const Dashboard = () => {
       </Flex>
       <Flex width={"100%"} height={"fit-content"} gap="1rem">
         <Box width="65%">
-          <Projects isTablePage={false}/>
+          <Projects isTablePage={false} />
         </Box>
         <Flex
           width={"35%"}
@@ -43,7 +43,7 @@ const Dashboard = () => {
           direction={"column"}
           gap=".5rem"
         >
-          <Flex direction={"column"} >
+          <Flex direction={"column"}>
             <Text fontSize={".75rem"} color="black" fontWeight={"bold"}>
               Order's Overview
             </Text>
@@ -56,7 +56,7 @@ const Dashboard = () => {
               </Text>
             </div>
           </Flex>
-          <OrderOverview/>
+          <OrderOverview />
         </Flex>
       </Flex>
     </Flex>

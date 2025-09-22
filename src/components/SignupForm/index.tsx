@@ -27,6 +27,9 @@ const SignupForm:FC<SignupFormProps> = ({onSignupSuccess}) => {
                 variant="outline"
                 size="lg"
                 borderColor="blackAlpha.300"
+                _hover={
+                  {backgroundColor:"blackAlpha.200"}
+                }
               >
                 <img src={button.icon} alt={button.alt} className="w-5 h-5" />
               </IconButton>

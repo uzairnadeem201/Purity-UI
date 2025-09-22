@@ -3,13 +3,10 @@ import {
   Flex,
   Text,
   Input,
-  InputGroup,
   Button,
-  IconButton,
-  Center,
 } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
-import { Search, User, Settings, Bell } from "lucide-react";
+import { Search,Settings, Bell } from "lucide-react";
 import DashboardMenu from "@/components/DashboardMenu";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
