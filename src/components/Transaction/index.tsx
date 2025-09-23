@@ -1,4 +1,4 @@
-import { Box, Flex, Container, Text, Image } from "@chakra-ui/react";
+import {Flex, Container, Text, Image } from "@chakra-ui/react";
 import calendar from "../../assets/transaction/calendar.svg";
 import { transactions } from "@/data/billing";
 import TransactionCard from "../TransactionCard";

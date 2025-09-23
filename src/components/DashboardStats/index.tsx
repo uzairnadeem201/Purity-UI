@@ -1,4 +1,4 @@
-import { Flex, Text, IconButton, Image, } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { useMemo} from "react";
 import {stats,previousStats} from "../../data/dashboard"
 import DashboardStatsCard from "../DashboardStatsCard";

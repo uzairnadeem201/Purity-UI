@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import useIconsColor from "@/hooks/IconsColor/index.ts";
 
 interface Props {
