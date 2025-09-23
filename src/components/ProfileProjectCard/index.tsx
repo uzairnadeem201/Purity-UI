@@ -1,5 +1,4 @@
 import { Flex,Box,Image,Text,Button } from "@chakra-ui/react"
-import projectimg from "../../assets/profile/projectimg.svg"
 import type {FC} from "react"
 interface ProjectProps{
     project:{

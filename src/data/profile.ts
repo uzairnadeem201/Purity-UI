@@ -42,7 +42,7 @@ export const user =[
 ]
 
 export const conversations = [{
-    icon: avatar,
+    icon: avatar3,
     username: "Alina Rai",
     text:"Hi! I need more information...",
 },
@@ -52,7 +52,7 @@ export const conversations = [{
     text:"Hi! I need more information...",
 },
 {
-    icon: avatar,
+    icon: avatar2,
     username: "Esthera Jackson",
     text:"Hi! I need more information...",
 },

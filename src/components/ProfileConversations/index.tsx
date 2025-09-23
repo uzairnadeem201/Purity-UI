@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Switch, Button, Image } from "@chakra-ui/react";
+import { Box, Flex, Text,Button, Image } from "@chakra-ui/react";
 import { conversations } from "@/data/profile";
 const ProfileConversation = () => {
   return (

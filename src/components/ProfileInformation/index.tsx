@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Switch, Image } from "@chakra-ui/react";
+import { Box, Flex, Text,Image } from "@chakra-ui/react";
 import { user } from "@/data/profile";
 import facebook from "../../assets/profile/profileIcons/facebook.svg";
 import instagram from "../../assets/profile/profileIcons/instagram.svg";

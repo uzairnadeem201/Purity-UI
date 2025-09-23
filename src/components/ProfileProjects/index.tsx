@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text,} from "@chakra-ui/react";
 import {Plus} from "lucide-react"
 import ProfileProjectCard from "../ProfileProjectCard";
 import { profileProjects } from "@/data/profile";

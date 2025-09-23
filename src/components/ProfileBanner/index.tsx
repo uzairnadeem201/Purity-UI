@@ -1,4 +1,4 @@
-import { Container, Box, Flex, Image, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
 import {useState} from "react"
 import background from "../../assets/profile/background.svg";
 import background2 from "../../assets/profile/background2.svg";
