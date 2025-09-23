@@ -1,4 +1,4 @@
-import signupLogo from "../../assets/signuplogo.svg";
+import signupLogo from "../../assets/signupLogo.svg";
 import loginLogo from "../../assets/login.svg";
 import { Flex, Button, Container } from "@chakra-ui/react";
 import type {FC} from "react"
