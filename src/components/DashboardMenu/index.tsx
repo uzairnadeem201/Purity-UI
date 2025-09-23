@@ -42,7 +42,13 @@ const DashboardMenu = () => {
 
   return (
     <Flex direction="column" width="full" height="100%" gap="1rem">
-      <Image src={logo} alt="Logo" width="full" mb={4} />
+      <Image src={logo} alt="Logo" width="full"/>
+      <Box
+              height="1px"
+              width="100%"
+              background="linear-gradient(to right, #E2E8F0, #4A5568, #E2E8F0)"
+              marginBottom={".5rem"}
+            />
       <Flex direction="column" width="full" height="100%" gap={4}>
         {menuList.map((item, index) => {
           const IconComp = item.icon;

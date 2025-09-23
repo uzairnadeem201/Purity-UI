@@ -1,8 +1,9 @@
-import UserChart from "@/components/UserChart"
-
+import { Container } from "@chakra-ui/react"
 const Profile = () => {
   return (
-    <UserChart/>
+    <Container position={"absolute"} >
+
+    </Container>
   )
 }
 
