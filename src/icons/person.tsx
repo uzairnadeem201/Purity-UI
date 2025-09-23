@@ -2,13 +2,15 @@ import type { FC } from "react";
 import useIconsColor from "@/hooks/IconsColor/index.ts";
 interface Props {
   color?: string;
+  mheight?:string;
+  mwidth?:string;
 }
-const person: FC<Props> = ({ color }) => {
+const person: FC<Props> = ({ color = "gray", mheight = "16", mwidth = "15" }) => {
   const { fillColor } = useIconsColor(color);
   return (
     <svg
-      width="15"
-      height="16"
+      width={mwidth}
+      height={mheight}
       viewBox="0 0 15 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
