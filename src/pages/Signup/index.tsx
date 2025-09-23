@@ -1,6 +1,6 @@
 import { Image, Flex, Text ,Box} from "@chakra-ui/react";
 import Header from "@/components/Header";
-import SignupImage from "../../assets/signupimg.svg";
+import SignupImage from "../../assets/signupImg.svg";
 import SignupForm from "@/components/SignupForm";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router";
