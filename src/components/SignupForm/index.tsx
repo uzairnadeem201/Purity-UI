@@ -18,7 +18,7 @@ const SignupForm:FC<SignupFormProps> = ({onSignupSuccess}) => {
     { text: "Password", type: "password" },
   ];
   return (
-      <Flex position="absolute" top="25%" direction="column" alignItems="center" gap="4" color="black" bgColor="white" borderRadius="2xl" padding="8" width={"full"} maxW="md" >
+      <Flex position="absolute" top={{ base: "15%", md: "15%", lg: "26%" }} direction="column" alignItems="center" gap="4" color="black" bgColor="white" borderRadius="2xl" padding="8" width={"full"} maxW="md" height={"fit-content"}>
         <Text fontWeight="bold">Register with</Text>
         <Flex gap="4" width="100%" alignItems="center" justifyContent={"center"}>
           {buttons.map((button) => (

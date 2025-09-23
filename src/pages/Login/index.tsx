@@ -26,20 +26,21 @@ const Login = () => {
       bgColor="gray.100"
     >
       <Header loginPage={true} />
-      <Flex width={"full"} height={"90%"} gap="10%">
+      <Flex width={"full"} height={"90%"} gap="10%" direction={{base:"column-reverse",md:"column-reverse", lg:"row"}}>
         <Flex
-          width={"50%"}
+          width={{lg:"50%",md:"100%"}}
           boxSizing={"border"}
           direction="column"
           gap="1"
           justifyContent={"center"}
-          paddingLeft={"18%"}
+          alignItems={{base:"center",lg:"normal"}}
+          paddingLeft={{base:"0",lg:"18%"}}
         >
-          <Flex direction="column" gap="1" justifyContent={"flex-start"}>
-            <Text fontSize="3xl" fontWeight="bold" color="teal.500">
+          <Flex direction="column" gap="1" justifyContent={"flex-start"} alignItems={{base:"center",lg:"normal"}}>
+            <Text fontSize={{base:"2xl",lg:"3xl"}} fontWeight="bold" color="teal.500">
               Welcome Back!
             </Text>
-            <Text fontSize="md" color="gray.500">
+            <Text fontSize={{base:"sm",lg:"lg"}} color="gray.500">
               Enter your email and password to sign in
             </Text>
           </Flex>
@@ -49,7 +50,7 @@ const Login = () => {
             marginTop="8"
             justifyContent={"center"}
             alignItems={"center"}
-            width="full"
+            width={{base:"50%",lg:"100%"}}
           >
             <Flex direction="column" fontWeight="normal" width="full" gap="5">
               {fields.map((field) => {
@@ -88,7 +89,7 @@ const Login = () => {
             >
               SIGN IN
             </Button>
-            <Text color="gray.500" fontSize={"sm"}>
+            <Text color="gray.500" fontSize={{base:"xs",lg:"sm"}} >
               Don't have an account?{" "}
               <span
                 className="text-teal-500 cursor-pointer"
@@ -100,8 +101,9 @@ const Login = () => {
           </Flex>
         </Flex>
         <Flex
-          width={"40%"}
+          width={{lg:"50%"}}
           height={"full"}
+          justifyContent={"center"}
           borderBottomLeftRadius={"lg"}
           overflow={"hidden"}
         >

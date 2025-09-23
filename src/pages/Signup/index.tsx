@@ -15,7 +15,7 @@ const Signup = () => {
       direction="column"
       alignItems="center"
       width="100vw"
-      height="96vh"
+      height="100vh"
       bgColor="gray.100"
     >
       <Flex position="relative" width="full" height={"50%"}>
@@ -27,17 +27,17 @@ const Signup = () => {
         direction="column"
         alignItems="center"
         gap="1"
-        top="12.5%"
+        top={{ base: "5%", md: "5%", lg: "12.5%" }}
         width="full"
       >
-        <Text fontSize="3xl" fontWeight="bold">
+        <Text fontSize={{md:"2xl",lg:"3xl"}} fontWeight="bold">
           Welcome!
         </Text>
         <Box>
-          <Text fontSize="md" textAlign="left">
-            Use these awesome forms to login or create new
+          <Text fontSize={{md:"sm",lg:"md",base:"xs"}}  textAlign="left">
+            Use these awesome forms to login or create new<br/>
           </Text>
-          <Text fontSize="md" textAlign="center">
+          <Text fontSize={{md:"sm",lg:"md",base:"xs"}}  textAlign="center">
             account into your project
           </Text>
         </Box>
