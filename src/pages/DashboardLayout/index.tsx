@@ -24,27 +24,31 @@ const Dashboard = () => {
   }),
     [activePage];
   return (
+    <>
     <Flex
       width="100vw"
       bgColor="gray.100"
       justifyContent={"flex-start"}
       padding={"4"}
       gap={"1rem"}
+      overflow={"auto"}
     >
       <Box width={"15%"} height={"50%"} boxSizing="border-box">
         <DashboardMenu />
       </Box>
-      <Box width="85%" height={"100%"}>
+      <Box width="85%" height={"100%"} zIndex={10} >
         <Flex
           width={"100%"}
           justifyContent={"space-between"}
           alignItems={"center"}
+          paddingX={"1rem"}
+          
         >
-          <Flex direction={"column"} justifyContent={"center"}>
-            <Text fontSize={".5rem"} color={"black"}>
+          <Flex direction={"column"} justifyContent={"center"} >
+            <Text fontSize={".5rem"} color={activePage!=="Profile"?"black":"white"}>
               Pages/{activePage}
             </Text>
-            <Text fontWeight="bold" fontSize=".65rem" color="black">
+            <Text fontWeight="bold" fontSize=".65rem" color={activePage!=="Profile"?"black":"white"}>
               {activePage}
             </Text>
           </Flex>
@@ -62,21 +66,22 @@ const Dashboard = () => {
             </Flex>
 
             <Button
-              color="gray"
+              color={activePage!=="Profile"?"gray":"white"}
               variant={"plain"}
               fontSize={".75rem"}
               fontWeight={"bold"}
             >
-              <Person mwidth="1rem" mheight="1rem" color="gray" /> Sign in
+              <Person mwidth="1rem" mheight="1rem" color={activePage!=="Profile"?"gray":"white"} /> Sign in
             </Button>
-            <Settings width={"1rem"} height="1rem" color="gray" />
-            <Bell width={"1rem"} height="1rem" color="gray" />
+            <Settings width={"1rem"} height="1rem" color={activePage!=="Profile"?"gray":"white"}/>
+            <Bell width={"1rem"} height="1rem" color={activePage!=="Profile"?"gray":"white"} />
           </Flex>
         </Flex>
         <Outlet />
       </Box>
-      <Footer/>
     </Flex>
+     <Footer/>
+     </>
   );
 };
 

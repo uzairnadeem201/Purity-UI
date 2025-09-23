@@ -1,10 +1,16 @@
-import { Container } from "@chakra-ui/react"
+import {Box} from "@chakra-ui/react"
+import ProfileProjects from "@/components/ProfileProjects";
+import ProfileBanner from "@/components/ProfileBanner";
+import ProfileCards from "@/components/ProfileCards";
 const Profile = () => {
+  
   return (
-    <Container position={"absolute"} >
+    <Box width={"100%"} height={"100vh"}>
+      <ProfileBanner/>
+      <ProfileCards/>
+      <ProfileProjects/>
+    </Box>
+  );
+};
 
-    </Container>
-  )
-}
-
-export default Profile
+export default Profile;

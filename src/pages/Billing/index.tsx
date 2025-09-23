@@ -1,4 +1,4 @@
-import {Flex,Box,Text,Container} from "@chakra-ui/react"
+import {Flex,Container} from "@chakra-ui/react"
 import CardInfo from "@/components/CardInfo"
 import Invoices from "@/components/Invoices"
 import BillingInfo from "@/components/BillingInfo"
