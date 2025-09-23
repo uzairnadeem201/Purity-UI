@@ -62,8 +62,8 @@ const UserStatCard = () => {
             return (
               <Flex
                 direction="column"
-                textAlign={"center"}
-                justifyContent={"center"}
+                textAlign={"flex-start"}
+                justifyContent={"flex-start"}
                 height={"fit-content"}
                 gap=".2rem"
               >
