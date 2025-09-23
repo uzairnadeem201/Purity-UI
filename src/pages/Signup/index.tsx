@@ -10,11 +10,12 @@ const Signup = () => {
     navigate("/signin");
   }
   return (
+    <>
     <Flex
       direction="column"
       alignItems="center"
       width="100vw"
-      height="100vh"
+      height="96vh"
       bgColor="gray.100"
     >
       <Flex position="relative" width="full" height={"50%"}>
@@ -43,8 +44,9 @@ const Signup = () => {
           
       </Flex>
       <SignupForm onSignupSuccess={handleSignup} />
-      <Footer />
     </Flex>
+    <Footer />
+    </>
   );
 };
 
